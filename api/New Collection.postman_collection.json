@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "08b3cd16-7543-4270-82ec-aecc9fbbe3ea",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21275003"
+	},
+	"item": [
+		{
+			"name": "allUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU5MTAwMTQyfQ.saW0D7n97Ca84exRfjNiGU7byacZ4l2HHTeZmjjE9aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"pulok007\",\r\n    \"FullName\": \"Pulok Ahmed\",\r\n    \"userEmail\": \"pulok007k@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postBlog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU5MTAwMTQyfQ.saW0D7n97Ca84exRfjNiGU7byacZ4l2HHTeZmjjE9aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"blogTitle\": \"1st\",\r\n    \"blogPost\": \"Demo first post from pulok007!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/postblog",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"postblog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seeBlogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/blogposts",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"blogposts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBlog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU5MTAwMTQyfQ.saW0D7n97Ca84exRfjNiGU7byacZ4l2HHTeZmjjE9aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"blogTitle\": \"Edit title\",\r\n    \"blogPost\" : \"Edited the post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/updatepost/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"updatepost",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MTAwNDE3fQ.yGbVf0R3NrvWAgOs2Nxy2mxxMfGdxXXaiDwQBvJf04c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/deletepost/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"deletepost",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userEmail\": \"marufpulok@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seePostOfUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU5MTAwNDE3fQ.yGbVf0R3NrvWAgOs2Nxy2mxxMfGdxXXaiDwQBvJf04c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/userposts",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"userposts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seeSpecificPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/post/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"post",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
